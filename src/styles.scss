@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import './config-scss/reset.scss';
+@import './config-scss/variables.scss';
+@import './config-scss/fonts.scss';
+@import './config-scss/mixins.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

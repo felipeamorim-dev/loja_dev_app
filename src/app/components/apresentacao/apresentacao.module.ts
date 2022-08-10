@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import { ApresentacaoRoutingModule } from './apresentacao-routing.module';
 import { ApresentacaoComponent } from './apresentacao.component';
@@ -11,7 +12,8 @@ import { ApresentacaoComponent } from './apresentacao.component';
   ],
   imports: [
     CommonModule,
-    ApresentacaoRoutingModule
+    ApresentacaoRoutingModule,
+    SharedModule
   ]
 })
 export class ApresentacaoModule { }
