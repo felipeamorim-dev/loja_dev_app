@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 
 //Import do angular material
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule
   ],
   exports: [
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,107 @@
+@import '../../../config-scss/mixins.scss';
+
+.container-main {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#4145A5, rgb(16, 17, 41));
+
+  .background {
+    height: 100vh;
+    background: url('../../../assets/img/base-login.svg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include container-flex(0, column);
+    align-items: center;
+    justify-content: center;
+
+    .card-container{
+      width: 400px;
+      height: auto;
+      background-color: rgba($color: #ffffff, $alpha: 0.7);
+      @include container-flex(0, column);
+      align-items: center;
+      justify-content: center;
+
+      mat-card-header {
+        @include container-flex(0, row);
+        align-items: center;
+        justify-content: center;
+        margin-left: -25px;
+
+        mat-card-title {
+          height: 100%;
+          margin-left: -25px;
+          font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-weight: 700;
+          color: var(--primary-color);
+          font-size: 2rem;
+        }
+
+        img {
+          width: 72px;
+          height: auto;
+          order: -1;
+        }
+      }
+
+      mat-card-footer{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.width-input {
+  width: 100%;
+  border-color: var(--primary-color);
+
+  mat-label {
+    color: var(--primary-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+  }
+
+  ::placeholder {
+    color: var(--placeholder-text);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--secundary-color);
+}
+
+.btn {
+  width: 100%;
+  @include container-flex(15px, column);
+
+  .primary{
+    background-color: var(--primary-color);
+    color: var(--branco);
+  }
+
+  .secundary{
+    background-color: var(--secundary-color);
+    color: var(--branco);
+  }
+}
+
+
+
+
+
+
+
+
+
