@@ -37,7 +37,7 @@
           margin-left: -25px;
           font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
           font-weight: 700;
-          color: var(--primary-color);
+          color: var(--branco);
           font-size: 2rem;
         }
 
@@ -45,6 +45,7 @@
           width: 72px;
           height: auto;
           order: -1;
+          margin-bottom: 10px;
         }
       }
 
@@ -82,6 +83,10 @@
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   color: var(--branco);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-outline {
+   color: #ff884d;
 }
 
 .btn {
