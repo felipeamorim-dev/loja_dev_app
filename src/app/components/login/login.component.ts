@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +10,26 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private toast: ToastrService) { }
+  formLogin!: FormGroup;
+
+  constructor(private toast: ToastrService, private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.formLogin = new FormGroup({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
+    })
   }
 
   logar() {
-    this.toast.info('Username ou senha inválido!', 'Não Autorizado');
+    const cred: Credential = this.formLogin.getRawValue();
+    this.auth.login(cred).subscribe({
+      next: response => {
+        const token = response.headers.get("authorization").substring(7);
+        this.auth.loginComSucesso(token);
+        this.toast.success('Login realizado com sucesso!');
+      }
+    })
   }
 
 }
