@@ -10,8 +10,6 @@ import { ToastrModule } from 'ngx-toastr';
 // Módulo http
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 @NgModule({
   declarations: [
     AppComponent

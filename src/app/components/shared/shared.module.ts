@@ -8,6 +8,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { AuthInterceptorProvider } from 'src/app/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule
-  ]
+  ],
+  providers: [AuthInterceptorProvider]
 })
 export class SharedModule { }
