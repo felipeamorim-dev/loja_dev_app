@@ -19,7 +19,7 @@ export class AuthService {
     });
   }
 
-  loginComSucesso(token: string) {
+  loginWithSuccess(token: string) {
     if (token) localStorage.setItem('token', token);
   }
 
