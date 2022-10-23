@@ -43,7 +43,8 @@
 
 .form {
   width: 100%;
-  margin-top: 30px;
+  height: 100%;
+  margin-top: -72px;
 
   @include container-flex(15px, column);
   justify-content: center;
@@ -75,6 +76,7 @@
 
   button {
     width: 100%;
+    margin: 0px 30px;
   }
 }
 
@@ -94,11 +96,6 @@
 
 .buscar {
   background-color: var(--secundary-color);
-  color: var(--branco);
-}
-
-.salvar {
-  background-color: var(--primary-color);
   color: var(--branco);
 }
 
