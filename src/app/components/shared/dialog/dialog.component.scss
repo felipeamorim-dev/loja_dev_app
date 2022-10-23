@@ -1,0 +1,49 @@
+@import "../../../../config-scss/mixins.scss";
+
+.card {
+
+  @include container-flex(5px, column);
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-top: 10px;
+  }
+
+  mat-card-content {
+    width: 100%;
+
+    @include container-flex(5px, column);
+    justify-content: center;
+    align-items:  center;
+
+    .ident, .cred {
+      @include container-flex(12px, row);
+    }
+  }
+
+  .action{
+    width: 100%;
+
+    button {
+      background-color: var(--primary-color);
+      color: var(--branco);
+    }
+  }
+}
+
+
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--secundary-color);
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-outline {
+    color: var(--primary-color);
+  }
+
+  .mat-form-field-label {
+    color: var(--primary-color);
+  }
+}

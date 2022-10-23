@@ -9,23 +9,29 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { AuthInterceptorProvider } from 'src/app/interceptors/auth.interceptor';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DialogComponent
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [AuthInterceptorProvider]
 })

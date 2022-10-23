@@ -1,0 +1,33 @@
+<p>
+  <mat-card mat-elevation-z8 class="card">
+      <mat-card-header>
+          <mat-card-title>Dados para cadastrar o usuário</mat-card-title>
+      </mat-card-header>
+      <img  mat-card-avatar [src]="imgDefault">
+      <mat-card-content>
+        <div class="ident">
+          <mat-form-field mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" placeholder="Digite seu nome ..." value="{{data.nome}}" >
+          </mat-form-field>
+          <mat-form-field mat-form-field appearance="outline">
+            <mat-label>Nome de usuário</mat-label>
+            <input matInput type="text" placeholder="Digite seu usuário..." value="{{data.nomeUsuario}}" >
+          </mat-form-field>
+        </div>
+        <div class="cred">
+          <mat-form-field mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput type="text" placeholder="Digite seu e-mail..." value="{{data.email}}" >
+          </mat-form-field>
+          <mat-form-field mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input matInput type="password" placeholder="Digite sua senha..." value="{{data.senha}}" >
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="action" align="start">
+          <button mat-raised-button >Salvar</button>
+      </mat-card-actions>
+  </mat-card>
+</p>
