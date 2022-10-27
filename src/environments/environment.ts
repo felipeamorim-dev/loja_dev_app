@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   URL_BASE: "http://localhost:8080",
-  URL_BASE_GITHUB: "https://api.github.com/users/"
+  URL_BASE_GITHUB: "https://api.github.com/users"
 };
 
 /*

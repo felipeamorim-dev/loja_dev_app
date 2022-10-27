@@ -11,6 +11,6 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getProfileUser(githubUsername: string): Observable<any> {
-    return this.http.get<any>(`${environment.URL_BASE_GITHUB}githubUsername`).pipe(first());
+    return this.http.get<any>(`${environment.URL_BASE_GITHUB}/${githubUsername}`).pipe(first());
   }
 }

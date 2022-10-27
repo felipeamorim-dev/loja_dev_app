@@ -6,18 +6,19 @@
     </div>
     <div class="form">
       <img src="../../../../assets/img/person.svg" alt="Person" />
-      <form>
+      <form [formGroup]="usuarioForm">
         <mat-form-field appearance="outline">
           <mat-label>Github username</mat-label>
           <input
             matInput
             type="text"
+            formControlName="nome"
             placeholder="Digite seu username ..."
           />
         </mat-form-field>
       </form>
       <div class="action">
-        <button mat-raised-button class="buscar" (click)="openDialog()">Buscar</button>
+        <button mat-raised-button class="buscar" (click)="buscar()">Buscar</button>
       </div>
     </div>
   </div>
