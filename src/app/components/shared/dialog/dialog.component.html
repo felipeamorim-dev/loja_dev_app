@@ -4,30 +4,30 @@
           <mat-card-title>Dados para cadastrar o usuário</mat-card-title>
       </mat-card-header>
       <img  mat-card-avatar [src]="imgDefault">
-      <mat-card-content>
+      <mat-card-content [formGroup]="usuarioFormDialog">
         <div class="ident">
           <mat-form-field mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
-            <input matInput type="text" placeholder="Digite seu nome ..." value="{{data.nome}}" >
+            <input matInput type="text" formControlName="nome" placeholder="Digite seu nome ...">
           </mat-form-field>
           <mat-form-field mat-form-field appearance="outline">
             <mat-label>Nome de usuário</mat-label>
-            <input matInput type="text" placeholder="Digite seu usuário..." value="{{data.nomeUsuario}}" >
+            <input matInput type="text" formControlName="nomeUsuario" placeholder="Digite seu usuário...">
           </mat-form-field>
         </div>
         <div class="cred">
           <mat-form-field mat-form-field appearance="outline">
             <mat-label>E-mail</mat-label>
-            <input matInput type="text" placeholder="Digite seu e-mail..." value="{{data.email}}" >
+            <input matInput type="text" formControlName="email" placeholder="Digite seu e-mail...">
           </mat-form-field>
           <mat-form-field mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
-            <input matInput type="password" placeholder="Digite sua senha..." value="{{data.senha}}" >
+            <input matInput type="password" formControlName="senha" placeholder="Digite sua senha...">
           </mat-form-field>
         </div>
       </mat-card-content>
       <mat-card-actions class="action" align="start">
-          <button mat-raised-button >Salvar</button>
+          <button mat-raised-button [disabled]="validatedForm()" [mat-dialog-close]="salvar()">Salvar</button>
       </mat-card-actions>
   </mat-card>
 </p>

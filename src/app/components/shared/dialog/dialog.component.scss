@@ -6,7 +6,18 @@
   justify-content: center;
   align-items: center;
 
+  mat-card-header {
+    mat-card-title {
+      font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+  }
+
   img {
+    width: 72px;
+    height: 72px;
     margin-top: 10px;
   }
 
@@ -28,6 +39,10 @@
     button {
       background-color: var(--primary-color);
       color: var(--branco);
+
+      &:disabled {
+        background-color: var(--placeholder-text);
+      }
     }
   }
 }
