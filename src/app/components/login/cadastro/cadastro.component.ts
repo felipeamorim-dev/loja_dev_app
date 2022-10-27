@@ -66,7 +66,8 @@ export class CadastroComponent implements OnInit {
         next: res => {
           this.toast.success('Usuário cadastrado com sucesso', 'Cadastro de usuário');
           this.router.navigate(['login']);
-        }
+        },
+        error: () => this.toast.error('Não foi possivel concluir o cadastro', 'Erro ao Cadastrar Usuário')
       })
     })
   }
