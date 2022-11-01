@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { AuthInterceptorProvider } from 'src/app/interceptors/auth.interceptor';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatBadgeModule
   ],
   exports: [
     MatButtonModule,
@@ -31,7 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatBadgeModule
   ],
   providers: [AuthInterceptorProvider]
 })

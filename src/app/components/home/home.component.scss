@@ -1,0 +1,87 @@
+@import "../../../config-scss/mixins.scss";
+
+.main {
+  height: 100vh;
+  background-image: url("../../../assets/img/efeito_fundo.svg");
+  background-position: right top;
+  background-size: 900px, 900px;
+  background-repeat: no-repeat;
+
+  header {
+    height: 102px;
+
+    @include container-flex(36px, row);
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      margin-top: 6px;
+    }
+  }
+}
+
+.logo {
+  @include container-flex(6px, row);
+  align-items: center;
+
+  span {
+    margin-bottom: 6px;
+    margin-left: -25px;
+    font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--preto);
+  }
+}
+
+.search {
+  width: 50%;
+
+  mat-form-field {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 1.1rem;
+
+    ::placeholder {
+      height: auto;
+      color: var(--placeholder-text);
+      font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    mat-icon {
+      color: var(--icon-color);
+    }
+  }
+}
+
+.container-icon {
+  margin-right: 25px;
+  @include container-flex(15px, row);
+  align-items: center;
+
+  a {
+    mat-icon {
+      width: 30px;
+      height: 30px;
+      color: var(--icon-color);
+      font-size: 30px;
+    }
+  }
+}
+
+.carteira {
+  color: var(--icon-color);
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #ff884d;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-outline {
+  color: var(--branco);
+}

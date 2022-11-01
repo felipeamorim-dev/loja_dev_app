@@ -4,7 +4,10 @@ import { GuardGuard } from 'src/app/core/guard.guard';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
-  { path: '', canActivate: [GuardGuard], component: HomeComponent }
+  { path: '',
+    //canActivate: [GuardGuard],
+    component: HomeComponent
+  }
 ];
 
 @NgModule({
