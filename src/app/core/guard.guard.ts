@@ -16,8 +16,6 @@ export class GuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
 
-    console.log(route, state);
-
     let authenticate = this.authService.isAuthenticated();
 
     if (authenticate) return true;
