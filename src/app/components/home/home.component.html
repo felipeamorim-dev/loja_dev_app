@@ -18,6 +18,37 @@
       <a href="#"> <mat-icon>account_circle</mat-icon> </a>
     </div>
   </header>
+  <section class="carrossel shadow-effect">
+    <div class="shadow-effect">
+      <div class="text-container">
+        <h1>NOTEBOOKS</h1>
+        <p>
+          Armazenamento com SSD
+          para maiores velocidades de leitura
+          e escrita
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="divisor"></div>
+  <section>
+    <h1 class="subtitle">Melhores Produtos</h1>
+    <div class="itens">
+      <mat-card *ngFor="let produto of products">
+        <img matCardImage [src]="produto.urlImage">
+          <mat-card-content>
+              <mat-card-title>{{ produto.nome }}</mat-card-title>
+              <p>
+                <span>R$ {{ produto.preco }}</span>
+              </p>
+              <button mat-raised-button class="btn">Adicionar ao carrinho</button>
+          </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+  <footer class="footer">
+    <mat-icon class="mat-18">code</mat-icon>
+    <p>Desenvolvido por Felipe Amorim</p>
+  </footer>
 </div>
 
-<p>home works!</p>
