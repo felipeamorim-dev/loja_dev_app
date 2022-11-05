@@ -39,7 +39,7 @@
           <mat-card-content>
               <mat-card-title>{{ produto.nome }}</mat-card-title>
               <p>
-                <span>R$ {{ produto.preco }}</span>
+                <span>{{ produto.preco | currency }}</span>
               </p>
               <button mat-raised-button class="btn">Adicionar ao carrinho</button>
           </mat-card-content>
