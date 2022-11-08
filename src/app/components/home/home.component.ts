@@ -47,7 +47,6 @@ export class HomeComponent implements OnInit {
   getUserLogging(username: string) {
     this.userService.findPerUsername(username).subscribe({
       next: res => {
-        console.log(res)
         this.user = res
         this.getAmountUser(res['id']);
       }
