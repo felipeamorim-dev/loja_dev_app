@@ -15,6 +15,8 @@ import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     FormsModule,
     MatDialogModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatMenuModule
   ],
   exports: [
     MatButtonModule,
@@ -39,7 +42,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     FormsModule,
     MatDialogModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatMenuModule
   ],
   providers: []
 })

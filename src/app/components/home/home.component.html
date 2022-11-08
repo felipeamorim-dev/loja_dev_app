@@ -13,9 +13,21 @@
       </form>
     </div>
     <div class="container-icon">
-      <span class="carteira">R$ 500,00 </span>
+      <span class="carteira"> {{ saldo | currency }}</span>
       <a href="#"> <mat-icon matBadge="15" matBadgeColor="warn">add_shopping_cart</mat-icon> </a>
-      <a href="#"> <mat-icon>account_circle</mat-icon> </a>
+      <mat-icon *ngIf="!user.urlImagePerfil">account_circle</mat-icon>
+      <img class="avatar" *ngIf="user.urlImagePerfil" [src]="user.urlImagePerfil"/>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+
     </div>
   </header>
   <section class="carrossel shadow-effect">
@@ -31,19 +43,21 @@
     </div>
   </section>
   <div class="divisor"></div>
-  <section>
-    <h1 class="subtitle">Melhores Produtos</h1>
-    <div class="itens">
-      <mat-card *ngFor="let produto of products">
-        <img matCardImage [src]="produto.urlImage">
-          <mat-card-content>
-              <mat-card-title>{{ produto.nome }}</mat-card-title>
-              <p>
-                <span>{{ produto.preco | currency }}</span>
-              </p>
-              <button mat-raised-button class="btn">Adicionar ao carrinho</button>
-          </mat-card-content>
-      </mat-card>
+  <section class="products">
+    <div>
+      <h1 class="subtitle">Melhores Produtos</h1>
+      <div class="itens">
+        <mat-card *ngFor="let produto of products">
+          <img matCardImage [src]="produto.urlImage">
+            <mat-card-content>
+                <mat-card-title>{{ produto.nome }}</mat-card-title>
+                <p>
+                  <span>{{ produto.preco | currency }}</span>
+                </p>
+                <button mat-raised-button class="btn">Adicionar ao carrinho</button>
+            </mat-card-content>
+        </mat-card>
+      </div>
     </div>
   </section>
   <footer class="footer">
