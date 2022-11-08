@@ -18,4 +18,12 @@ export class UsuarioService {
   findById(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`${environment.URL_BASE}/${id}`).pipe(first());
   }
+
+  findPerUsername(username: string): Observable<any> {
+    return this.http.get<any>(`${environment.URL_BASE}/api/usuarios/nome/${username}`).pipe(first());
+  }
+
+  findWalletPerUser(usuarioId: number): Observable<any> {
+    return this.http.get<any>(`${environment.URL_BASE}/api/carteiras/saldo/${usuarioId}`).pipe(first());
+  }
 }
